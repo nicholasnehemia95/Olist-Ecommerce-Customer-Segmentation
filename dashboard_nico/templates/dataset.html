@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Dataset{% endblock %}
+{% block navbar %}
+<nav id="mainav" class="fl_right"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li><a href="/">Home</a></li>
+      <li class="active"><a href="/dataset">Dataset</a></li>
+      <li><a href="/EDA">EDA</a></li>
+      <li><a href="/cluster_results">Results</a></li>
+      <li><a href="/predict">Predict</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+{% endblock %}
+
+
+{% block content %}
+<div class="table-wrapper-scroll-y my-custom-scrollbar-table">
+    <table class="table table-bordered table-striped mb-0">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">order_id</th>
+          <th scope="col">customer_unique_id</th>
+          <th scope="col">customer_city</th>
+          <th scope="col">order_status</th>
+          <th scope="col">price</th>
+          <th scope="col">order_delivered_customer_date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in range(0, data | length) %}
+        <tr>
+          <th scope="row">{{ i+1 }}</th>
+          <td>{{ data.order_id[i] }}</td>
+          <td>{{ data.customer_unique_id[i] }}</td>
+          <td>{{ data.customer_city[i] }}</td>
+          <td>{{ data.order_status[i] }}</td>
+          <td>{{ data.price[i] }}</td>
+          <td>{{ data.order_delivered_customer_date[i] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

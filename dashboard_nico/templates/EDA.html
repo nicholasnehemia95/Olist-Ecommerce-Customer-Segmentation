@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Exploratory Data Analysis{% endblock %}
+{% block navbar %}
+<nav id="mainav" class="fl_right"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li><a href="/">Home</a></li>
+      <li><a href="/dataset">Dataset</a></li>
+      <li class="active"><a href="/EDA">EDA</a></li>
+      <li><a href="/cluster_results">Results</a></li>
+      <li><a href="/predict">Predict</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+{% endblock %}
+{% block content %}
+<h1 style="font-size:55px ;text-align: center; " >Exploratory Data Analysis </h1>
+<h2 style="font-size: 20px;"> Frequency Data Distribution</h2>
+<img src="../static/imagesNotebook/buyer_freq.png" style="background-color: white; max-width: 50% ;" alt="Frequency of Buyers">
+<h2 style="font-size: 20px;"> New Customers Overtime</h2>
+<img src="../static/imagesNotebook/unique_customer_per_month.png" style="background-color: white ;max-width: 50% " alt="Unique customers per month">
+<p> From the graph, there are a few takeaways:
+    <ol>
+        <li> Customer retention seems to be a problem , because over 90% of the unique customers have only done 1 transaction over the set time period</li>
+        <li> Among the unique customers, There are a lot who are new to the platform. Marketing team should pay close attention to keep them engaged. </li>
+    </ol> 
+     </p>
+<img src="../static/imagesNotebook/distribusi_monetary_less_1000.png" style="background-color: white; max-width: 50%;" alt="Unique customers per month">
+<br>
+<p> From the Monetary Graph it can be concluded:
+    <ol>
+        <li> Most people have monetary values in the range of 0-200</li>
+    </ol> 
+     </p>
+<img src="../static/imagesNotebook/distribusi_recency.png" style="background-color: white;max-width: 50% ;" alt="Unique customers per month">
+<p> From the Recency Graph , it can be concluded that most people have done a transaction within 40 days of the setpoint.<br>
+  This shows that most customers are still in fact active.
+</p>
+{% endblock %}

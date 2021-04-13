@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Results{% endblock %}
+{% block navbar %}
+<nav id="mainav" class="fl_right"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li><a href="/">Home</a></li>
+      <li><a href="/dataset">Dataset</a></li>
+      <li><a href="/EDA">EDA</a></li>
+      <li class="active"><a href="#">Results</a></li>
+      <li><a href="/cluster_results">Predict</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+{% endblock %}
+{% block content %}
+<h1 style="font-size:55px ;text-align: center; " >Clustering Results </h1>
+<h2 style="font-size: 20px; text-align: center;"> Clustering of RFM Matrix</h2>
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~nicholasnehemia95/1.embed" style="text-align: center; width: 100%;"></iframe>
+<br>
+<h2 style="font-size: 20px; text-align: center;"> Clustering of Raw Data before RFM Application based on RFM</h2>
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~nicholasnehemia95/3.embed" style="text-align: center; width: 100%;"></iframe>
+{% endblock %}

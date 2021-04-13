@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+Template Name: Gleblu
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="static/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left"> 
+      <!-- ################################################################################################ -->
+      <h1><a href="/">Final Project Dashboard</a></h1>
+      <!-- ################################################################################################ -->
+    </div>
+    {% block navbar %}
+    {% endblock %}
+  </header>
+</div>
+ <!-- MAIN BODY -->
+ {% block content %} 
+
+ {% block page_content %}{% endblock %}
+
+ {% endblock %} 
+ <!-- END OF MAIN BODY -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script data-plotly="nicholasnehemia95:1" sharekey-plotly="nZPJI8fvjvMqSfA4LGfmBM" src="https://plotly.com/embed.js" async></script>
+<script src="static/layout/scripts/jquery.min.js"></script>
+<script src="static/layout/scripts/jquery.backtotop.js"></script>
+<script src="static/layout/scripts/jquery.mobilemenu.js"></script>
+<script src="https://kit.fontawesome.com/93c31243aa.js" crossorigin="anonymous"></script>
+</body>
+</html>
